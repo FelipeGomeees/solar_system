@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="dados">
+        <h3>1 Segundo = 1 Ano</h3>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="mercurio objeto">
+
+            </div>
+            <div class="venus objeto">
+
+            </div>
+            <div class="terra objeto">
+
+            </div>
+            <div class="marte objeto">
+
+            </div>
+            <div class="jupiter objeto">
+
+            </div>
+            <div class="saturno objeto">
+
+            </div>
+            <div class="urano objeto">
+
+            </div>
+            <div class="netuno objeto">
+
+            </div>
+            <div class="sol">
+
+            </div>
+        </div>
+    </section>
+    <style>
+    body {
+        margin: 0px;
+        overflow: hidden;
+    }
+    .dados {
+        color: white;
+        border: 1px solid white;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        overflow: hidden;
+    }
+    .parallax {
+        background-image: url('space.jpg');
+        background-size: cover;
+        width: 100vw;
+        height: 100svh;
+        overflow: hidden;
+    }
+    .container {
+        /* border: 1px solid white; */
+        border-radius: 100%;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(5);
+    }
+    .sol {
+        z-index: 2;
+        width: 75px;
+        height: 75px;
+        background-color: rgb(255, 153, 0);
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 100%;
+        transform: scale(0.4, 2);
+    }
+    .objeto {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 100%;
+    }
+    .mercurio {
+        z-index: 3;
+        width: 10px;
+        height: 10px;
+        background: radial-gradient(circle, rgb(194, 194, 194) 0%, rgb(255, 255, 255) 100%);
+        /* transition: border-radius 1s; */
+        animation: orbita2 0.25s linear;
+        animation-iteration-count:  infinite;
+        /* animation-timeline: 2s ; */
+    }
+
+    .venus {
+        z-index: 3;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, rgb(255, 232, 156) 0%, rgb(247, 170, 29) 100%);
+        /* transition: border-radius 1s; */
+        animation: orbita3 0.65s linear;
+        animation-iteration-count:  infinite;
+        /* animation-timeline: 2s ; */
+    }
+
+    .terra {
+        z-index: 3;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, rgb(4, 233, 126) 0%, rgb(170, 252, 238) 100%);
+        /* transition: border-radius 1s; */
+        animation: orbita4 1.0s linear;
+        animation-iteration-count:  infinite;
+        /* animation-timeline: 2s ; */
+    }
+
+    .marte {
+        z-index: 3;
+        width: 15px;
+        height: 15px;
+        background: radial-gradient(circle, rgb(158, 32, 9) 0%, rgb(219, 71, 13) 100%);
+        /* transition: border-radius 1s; */
+        animation: orbita5 1.88s linear;
+        animation-iteration-count:  infinite;
+        /* animation-timeline: 2s ; */
+
+    }
+
+    .jupiter {
+        z-index: 3;
+        width: 35px;
+        height: 35px;
+        background: radial-gradient(circle, rgb(151, 112, 3) 0%, rgb(243, 229, 152) 100%);
+        /* transition: border-radius 1s; */
+        animation: orbita6 11.8s linear;
+        animation-iteration-count:  infinite;
+        /* animation-timeline: 2s ; */
+    }
+
+    .saturno {
+        z-index: 3;
+        width: 25px;
+        height: 25px;
+        background: radial-gradient(circle, rgb(233, 217, 175) 0%, rgb(233, 230, 213) 100%);
+        /* transition: border-radius 1s; */
+        animation: orbita7 29.4s linear;
+        animation-iteration-count:  infinite;
+        /* animation-timeline: 2s ; */
+    }
+
+    .urano {
+        z-index: 3;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, rgb(13, 79, 141) 0%, rgb(103, 153, 247) 100%);
+        /* transition: border-radius 1s; */
+        animation: orbita8 84.0s linear;
+        animation-iteration-count:  infinite;
+        /* animation-timeline: 2s ; */
+    }
+
+    .netuno {
+        z-index: 3;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, rgb(55, 197, 253) 0%, rgb(88, 234, 253) 100%);
+        /* transition: border-radius 1s; */
+        animation: orbita9 167.9s linear;
+        animation-iteration-count:  infinite;
+        /* animation-timeline: 2s ; */
+    }
+    /* @keyframes raio {
+        0% {
+            border-radius: 0;
+            background-color: red;
+        }
+        75% {
+            background-color: blue;
+        }
+        100% {
+            transform: rotate(360deg) translateX(400px);
+            border-radius: 100%;
+            background-color: blue;
+        }
+    } */
+    
+    @keyframes orbita {
+        0%{
+            transform: translateY(200px) translatex(0px) scale(70%);
+        }
+        25% {
+            transform: translateY(75px) translatex(400px) scale(50%);
+        }
+        50% {
+            transform:  translateY(25px) translatex(10px) scale(30%);
+        }
+        75% {
+            transform:  translateY(75px) translatex(-400px) scale(50%);
+        }
+        100% {
+            transform:  translateY(200px) translatex(0px) scale(70%);
+        }
+    }
+
+    @keyframes orbita2 {
+        0%{
+            z-index: 3;
+            transform: rotate(0deg) translateX(35px) rotate(-0deg) scale(0.5, 2.5);
+        }
+        25% {
+            z-index: 3;
+            transform: rotate(90deg) translateX(35px) rotate(-90deg) scale(0.6, 3);
+        }
+        75% {
+            z-index: 1;
+            transform: rotate(270deg) translateX(35px) rotate(-270deg) scale(0.4, 2);
+        }
+        100% {
+            z-index: 1;
+            transform: rotate(360deg) translateX(35px) rotate(-360deg) scale(0.5, 2.5);
+        }
+    }
+
+    @keyframes orbita3 {
+        0%{
+            z-index: 3;
+            transform: rotate(0deg) translateX(50px) rotate(-0deg) scale(0.5, 2.5);
+        }
+        25% {
+            z-index: 3;
+            transform: rotate(90deg) translateX(50px) rotate(-90deg) scale(0.6, 3);
+        }
+        75% {
+            z-index: 1;
+            transform: rotate(270deg) translateX(50px) rotate(-270deg) scale(0.4, 2);
+        }
+        100% {
+            z-index: 1;
+            transform: rotate(360deg) translateX(50px) rotate(-360deg) scale(0.5, 2.5);
+        }
+    }
+
+    @keyframes orbita4 {
+        0%{
+            z-index: 3;
+            transform: rotate(0deg) translateX(65px) rotate(-0deg) scale(0.5, 2.5);
+        }
+        25% {
+            z-index: 3;
+            transform: rotate(90deg) translateX(65px) rotate(-90deg) scale(0.6, 3);
+        }
+        75% {
+            z-index: 1;
+            transform: rotate(270deg) translateX(65px) rotate(-270deg) scale(0.4, 2);
+        }
+        100% {
+            z-index: 1;
+            transform: rotate(360deg) translateX(65px) rotate(-360deg) scale(0.5, 2.5);
+        }
+    }
+
+    @keyframes orbita5 {
+        0%{
+            z-index: 3;
+            transform: rotate(0deg) translateX(80px) rotate(-0deg) scale(0.5, 2.5);
+        }
+        25% {
+            z-index: 3;
+            transform: rotate(90deg) translateX(80px) rotate(-90deg) scale(0.6, 3);
+        }
+        75% {
+            z-index: 1;
+            transform: rotate(270deg) translateX(80px) rotate(-270deg) scale(0.4, 2);
+        }
+        100% {
+            z-index: 1;
+            transform: rotate(360deg) translateX(80px) rotate(-360deg) scale(0.5, 2.5);
+        }
+    }
+
+    @keyframes orbita6 {
+        0%{
+            z-index: 3;
+            transform: rotate(0deg) translateX(120px) rotate(-0deg) scale(0.5, 2.5);
+        }
+        25% {
+            z-index: 3;
+            transform: rotate(90deg) translateX(120px) rotate(-90deg) scale(0.6, 3);
+        }
+        75% {
+            z-index: 1;
+            transform: rotate(270deg) translateX(120px) rotate(-270deg) scale(0.4, 2);
+        }
+        100% {
+            z-index: 1;
+            transform: rotate(360deg) translateX(120px) rotate(-360deg) scale(0.5, 2.5);
+        }
+    }
+
+    @keyframes orbita7 {
+        0%{
+            z-index: 3;
+            transform: rotate(0deg) translateX(140px) rotate(-0deg) scale(0.5, 2.5);
+        }
+        25% {
+            z-index: 3;
+            transform: rotate(90deg) translateX(140px) rotate(-90deg) scale(0.6, 3);
+        }
+        75% {
+            z-index: 1;
+            transform: rotate(270deg) translateX(140px) rotate(-270deg) scale(0.4, 2);
+        }
+        100% {
+            z-index: 1;
+            transform: rotate(360deg) translateX(140px) rotate(-360deg) scale(0.5, 2.5);
+        }
+    }
+
+    @keyframes orbita8 {
+        0%{
+            z-index: 3;
+            transform: rotate(0deg) translateX(165px) rotate(-0deg) scale(0.5, 2.5);
+        }
+        25% {
+            z-index: 3;
+            transform: rotate(90deg) translateX(165px) rotate(-90deg) scale(0.6, 3);
+        }
+        75% {
+            z-index: 1;
+            transform: rotate(270deg) translateX(165px) rotate(-270deg) scale(0.4, 2);
+        }
+        100% {
+            z-index: 1;
+            transform: rotate(360deg) translateX(165px) rotate(-360deg) scale(0.5, 2.5);
+        }
+    }
+
+    @keyframes orbita9 {
+        0%{
+            z-index: 3;
+            transform: rotate(0deg) translateX(190px) rotate(-0deg) scale(0.5, 2.5);
+        }
+        25% {
+            z-index: 3;
+            transform: rotate(90deg) translateX(190px) rotate(-90deg) scale(0.6, 3);
+        }
+        75% {
+            z-index: 1;
+            transform: rotate(270deg) translateX(190px) rotate(-270deg) scale(0.4, 2);
+        }
+        100% {
+            z-index: 1;
+            transform: rotate(360deg) translateX(190px) rotate(-360deg) scale(0.5, 2.5);
+        }
+    }
+    </style>
+</body>
+</html>
